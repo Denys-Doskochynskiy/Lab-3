@@ -13,7 +13,7 @@ public class BookstoreManager {
 		this.goods = goods;
 	}
 
-	public List<AbstractBookstore> findGoodsCheaperThan(GenreType genreType, List<AbstractBookstore> goods) {
+	public List<AbstractBookstore> findGoodsByGenreType(GenreType genreType, List<AbstractBookstore> goods) {
 		List<AbstractBookstore> result = new LinkedList<>();
 		for (int goodFromTheList = 0; goodFromTheList < goods.size(); goodFromTheList++) {
 			if (goods.get(goodFromTheList).getGenreType() == genreType) {
