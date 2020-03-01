@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import ua.lviv.iot.manager.BookstoreManager;
-import ua.lviv.iot.model.AbstractBookstore;;
+import ua.lviv.iot.model.AbstractBookstore;
+import ua.lviv.iot.model.GenreType;;
 
 public class BookstoreManagerTest extends GeneralBookstoreManagerTest {
 
@@ -13,13 +14,13 @@ public class BookstoreManagerTest extends GeneralBookstoreManagerTest {
 	@Test
 	public void testFindGoodsCheaperThan() {
 		BookstoreManager manager = new BookstoreManager(goods);
-		double price = 300;
-		result = manager.findGoodsCheaperThan(price, goods);
+		GenreType genreType = GenreType.HORROR;
+		result = manager.findGoodsCheaperThan(genreType, goods);
 
-		assertEquals(1550.65, goods.get(0).getPriceInUAH());
-		assertEquals(150.55, goods.get(1).getPriceInUAH());
-		assertEquals(28.69, goods.get(2).getPriceInUAH());
-		assertEquals(258.05, goods.get(3).getPriceInUAH());
+		assertEquals(null, goods.get(0).getGenreType());
+		assertEquals(null, goods.get(1).getGenreType());
+		assertEquals(null, goods.get(2).getGenreType());
+		assertEquals(GenreType.HORROR, goods.get(3).getGenreType());
 
 	}
 
