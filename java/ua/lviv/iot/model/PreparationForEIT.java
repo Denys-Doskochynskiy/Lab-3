@@ -27,5 +27,11 @@ public class PreparationForEIT extends AbstractBookstore {
 	public void setAvailabilityOfSolutionsTask(boolean availabilityOfSolutionsTask) {
 		this.availabilityOfSolutionsTask = availabilityOfSolutionsTask;
 	}
+	public String getHeaders() { return super.getHeaders() + "," + "yearOfEIT" +
+		  "," + "availabilityOfSolutionsTask"; }
+		  
+		  public String toCSV() { return super.toCSV() + "," +getYearOfEIT() + "," +
+		  isAvailabilityOfSolutionsTask()+"\n" ;
+		  }
 
 }
