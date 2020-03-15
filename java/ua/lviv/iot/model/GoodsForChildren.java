@@ -27,4 +27,9 @@ public class GoodsForChildren extends AbstractBookstore {
 	public void setEducationalToys(boolean educationalToys) {
 		this.educationalToys = educationalToys;
 	}
+	 public String getHeaders() { return super.getHeaders() + "," +
+	  "availabilityOfColringBooks"+ "," + "educationalToys"; }
+	  
+	  public String toCSV() { return super.toCSV() + "," +
+	  getAvailabilityOfColringBooks()+","+getEducationalToys()+"\n"; }
 }
