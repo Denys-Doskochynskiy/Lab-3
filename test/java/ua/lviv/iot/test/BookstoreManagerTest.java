@@ -20,7 +20,8 @@ public class BookstoreManagerTest extends GeneralBookstoreManagerTest {
 		assertEquals(null, goods.get(0).getGenreType());
 		assertEquals(null, goods.get(1).getGenreType());
 		assertEquals(null, goods.get(2).getGenreType());
-		assertEquals(GenreType.HORROR, goods.get(3).getGenreType());
+		assertEquals(null, goods.get(3).getGenreType());
+
 
 	}
 

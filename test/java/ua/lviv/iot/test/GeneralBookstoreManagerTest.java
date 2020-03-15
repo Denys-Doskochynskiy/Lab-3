@@ -14,11 +14,12 @@ class GeneralBookstoreManagerTest {
 	void setUp() {
 
 		this.goods = new LinkedList<AbstractBookstore>();
-		this.goods.add(new GoodsForChildren("100", "UAGame", null, 1, "Ukraine", true, false, 1550.65, true, true));
+		this.goods.add(new PreparationForEIT("AllIn1", "UATesting100", null, 1690, "Ukraine", true, false, 1550.65, 2018, true));
 		this.goods.add(new PreparationForEIT("Test", "UaTest", null, 256, "Ukraine", true, false, 150.55, 2019, true));
-		this.goods.add(new Calendar("Calendar", "UACalendar", null, 14, "Ua", true, false, 28.69, 2020, true));
-		this.goods.add(new BooksWithAgeRestrictions("It", "Stephan King", GenreType.HORROR, 1138, "English", false,
-				true, 258.05, 18, true));
+		this.goods.add(new PreparationForEIT("BestRes", "MathBest", null, 140, "Ua", true, false, 28.69, 2020, false));
+		this.goods.add(new PreparationForEIT("Math200", "British", null, 295, "English", false,
+				true, 258.05, 2015, true));
+
 	}
 
 }
