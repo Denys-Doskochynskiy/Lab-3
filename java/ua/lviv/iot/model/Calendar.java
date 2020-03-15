@@ -27,4 +27,9 @@ public class Calendar extends AbstractBookstore {
 	public void setYear(int year) {
 		this.year = year;
 	}
+	 public String getHeaders() { return super.getHeaders() + "," +
+	  "leakyCalendar"+ "," + "year"; }
+	  
+	  public String toCSV() { return super.toCSV() + "," +
+	  getLeakyCalendar()+","+getYear()+"\n"; }
 }

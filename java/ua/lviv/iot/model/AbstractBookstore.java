@@ -86,5 +86,15 @@ public abstract class AbstractBookstore {
 	public void setPriceInUAH(double priceInUAH) {
 		this.priceInUAH = priceInUAH;
 	}
+	
+	public String getHeaders() {
+		return "name" + "," + " producer" + "," + "genreType" + "," + "numberOfPages" + "," + "textLanguage" + ","
+				+ "newCondition " + "," + " hardCover" + "," + "priceInUAH";
+	}
+
+	public String toCSV() {
+		return getName() + "," + getProducer() + "," + getGenreType() + "," + getNumberOfPages() + ","
+				+ getTextLanguage() + "," + isNewCondition() + "," + isNardCover() + "," + getPriceInUAH() ;
+	}
 
 }

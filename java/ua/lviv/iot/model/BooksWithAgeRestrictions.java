@@ -29,4 +29,9 @@ public class BooksWithAgeRestrictions extends AbstractBookstore {
 	public void setAgeRestrictons(int ageRestrictons) {
 		this.ageRestrictons = ageRestrictons;
 	}
+	 public String getHeaders() { return super.getHeaders() + "," +
+	  "ageRestrictions"+","+"foulLanguage"; }
+	  
+	  public String toCSV() { return super.toCSV() + "," +
+	  getAgeRestrictons()+","+getFoulLanguage()+"\n"; }
 }
