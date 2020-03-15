@@ -1,9 +1,10 @@
 package ua.lviv.iot.test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 import ua.lviv.iot.manager.*;
 import ua.lviv.iot.model.*;
-import org.junit.jupiter.api.Test;
 
 class BookstoreUtilsTest extends GeneralBookstoreManagerTest {
 
@@ -11,6 +12,7 @@ class BookstoreUtilsTest extends GeneralBookstoreManagerTest {
 	@Test
 	public void testSortGoodsByName() {
 		BookstoreManagerUtils.sortGoodsByName(goods, SortType.ASCENDING);
+
 		assertEquals("AllIn1", goods.get(0).getName());
 		assertEquals("BestRes", goods.get(1).getName());
 		assertEquals("Math200", goods.get(2).getName());
@@ -27,6 +29,7 @@ class BookstoreUtilsTest extends GeneralBookstoreManagerTest {
 		assertEquals(1550.65, goods.get(3).getPriceInUAH());
 	}
 
+
 	@Test
 	public void testSortGoodsByNuberOfPages() {
 		BookstoreManagerUtils.SortByNumberOfPages(goods, SortType.ASCENDING);
@@ -34,5 +37,8 @@ class BookstoreUtilsTest extends GeneralBookstoreManagerTest {
 		assertEquals(256, goods.get(1).getNumberOfPages());
 		assertEquals(295, goods.get(2).getNumberOfPages());
 		assertEquals(1690, goods.get(3).getNumberOfPages());
+
 	}
+
 }
+

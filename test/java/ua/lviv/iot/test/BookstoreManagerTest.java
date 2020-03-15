@@ -15,7 +15,7 @@ public class BookstoreManagerTest extends GeneralBookstoreManagerTest {
 	public void testFindGoodsCheaperThan() {
 		BookstoreManager manager = new BookstoreManager(goods);
 		GenreType genreType = GenreType.HORROR;
-		result = manager.findGoodsCheaperThan(genreType, goods);
+		result = manager.findGoodsByGenreType(genreType, goods);
 
 		assertEquals(null, goods.get(0).getGenreType());
 		assertEquals(null, goods.get(1).getGenreType());
