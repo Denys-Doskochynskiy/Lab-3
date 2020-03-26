@@ -1,0 +1,9 @@
+name, producer,genreType,numberOfPages,textLanguage,newCondition , hardCover,priceInUAH,yearOfEIT,availabilityOfSolutionsTask
+AllIn1,UATesting100,HORROR,1690,Ukraine,true,false,1550.65,2018,true
+
+Test,UaTest,DRAMA,256,Ukraine,true,false,150.55,2019,true
+
+BestRes,MathBest,TALE,140,Ua,true,false,28.69,2020,false
+
+Math200,British,CRIME,295,English,false,true,258.05,2015,true
+
